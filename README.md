@@ -17,19 +17,11 @@ The simulator compares three different integration methods side-by-side:
 
 ## Project Structure
 
-WASM-Double-Pendulum/
-├── src/
-│   └── cpp/                # C++ Source Code
-│       ├── main_web.cpp
-│       └── simulation.hpp
-├── public/                 # Web Application (Serve this folder)
-│   ├── index.html          # Entry point (updated paths)
-│   ├── js/
-│   │   └── simAnimator.js  # Visualization logic
-│   └── wasm/
-│       ├── simulation.js   # Emscripten glue code
-│       └── simulation.wasm # Compiled WebAssembly binary
-└── README.md               # Project documentation
+*   **`src/cpp/`**: C++ source code (`main_web.cpp`, `simulation.hpp`). This contains the physics engine and integration logic.
+*   **`public/`**: The web root directory.
+    *   **`index.html`**: Entry point for the web application.
+    *   **`js/`**: JavaScript support files (e.g., `simAnimator.js` for visualization logic).
+    *   **`wasm/`**: Compiled WebAssembly binaries (`simulation.wasm`) and the Emscripten glue code (`simulation.js`).
 
 ## Getting Started
 
